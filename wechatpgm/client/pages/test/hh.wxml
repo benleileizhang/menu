@@ -1,0 +1,27 @@
+<view class="page">
+  <view class="page__hd">
+    <text>表单提交</text>
+  </view>
+<form class="page__bd" catchsubmit="formSubmit" catchreset="formReset">
+  <view class="section">
+    <input name="name" placeholder="姓名" auto-focus/>
+  </view>
+  <view class="section">
+    <input name="age" type="number" placeholder="年龄"/>
+  </view>
+  <view class="section section_gap">
+      <view class="section__title">性别</view>
+      <radio-group name="gender">
+        <label><radio value="MAN"/>MAN</label>
+        <label><radio value="WOMAN"/>WOMAN</label>
+      </radio-group>
+  </view>
+    <view class="btn-area">
+      <button formType="submit">提交</button>
+      <button formType="reset">重置</button>
+    </view>
+    <view class="page__hd" wx:if="{{error}}">
+      <text>{{error}}</text>
+    </view>
+</form>
+</view>
